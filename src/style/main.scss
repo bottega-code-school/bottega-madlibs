@@ -1,3 +1,14 @@
+@mixin button {
+    height: 50px;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    text-align: center;
+}
+
 .home {
     position: relative;
 
@@ -65,6 +76,7 @@
     display: grid;
     grid-template-rows: 1fr 50px;
     background-color: white;
+
     &__inputs {
         // background-color: skyblue;
         display: grid;
@@ -79,6 +91,25 @@
         justify-items: center;
         align-items: center;
     }
+
+    button:focus {
+        outline: none;
+    }
+
+    button {
+        justify-self: center;
+    }
+
+    &__generate {
+        background-color: #00CB79;
+        @include button;
+    }
+
+    &__clear {
+        background-color: #45B0E5;
+        @include button;
+    }
+
 }
 
 .input {
